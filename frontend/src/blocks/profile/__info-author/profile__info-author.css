@@ -1,0 +1,24 @@
+.profile__info-author{
+    margin: 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 1.14;
+    text-overflow: ellipsis;
+    max-width: 294px;
+    overflow: hidden;
+    white-space: nowrap; 
+}
+@media screen and (max-width: 694px) {
+    .profile__info-author {
+        transform: translateX(16px);
+      }
+}
+@media screen and (max-width: 399px) {
+    .profile__info-author {
+        max-width: 189px;
+        font-size: 27px;
+        line-height: 1.19;
+        transform: translateX(16px);
+      }
+}

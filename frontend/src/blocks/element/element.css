@@ -1,0 +1,11 @@
+.element{
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    min-height: 361px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
