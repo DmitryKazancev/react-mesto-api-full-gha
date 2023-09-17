@@ -2,8 +2,6 @@
 class Api {
     constructor(options) {
         this._baseUrl = options.baseUrl;
-        // this._headers = options.headers;
-        // this._authorization = options.headers.authorization;
     }
 
     //Get response function
@@ -120,10 +118,6 @@ class Api {
 
 const api = new Api({
     baseUrl: 'https://api.15sprint.nomoredomainsrocks.ru',
-    // headers: {
-    //     authorization: '0be97cdd-5214-4857-975b-3ef352f3ad1f',
-    //     'Content-Type': 'application/json'
-    // }
 });
 
 
