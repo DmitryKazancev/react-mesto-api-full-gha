@@ -7,7 +7,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 51.250.13.209
+IP 51.250.13.209
 
 Frontend https://15sprint.nomoredomainsrocks.ru/sign-in
 
