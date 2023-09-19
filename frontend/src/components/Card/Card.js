@@ -4,19 +4,21 @@ import CurrentUserContext from "../../contexts/CurrentUserContext"
 export default function Card({ card, onCardClick, onCardLike, onCardDelete }) {
 
     const currentUser = useContext(CurrentUserContext);
-    const isLiked = card.likes.some(i => i._id === currentUser._id);
+    const isLiked = card.likes.some(i => i._id === currentUser);
+    // const isLiked = card.likes.some(i => i._id === currentUser._id);
     const cardLikeButtonClassName = (
         `element__button-like ${isLiked && 'element__button-like_active'}`
     );
     const handleCardClick = () => {
         onCardClick({ name: card.name, link: card.link })
     };
-    const isOwn = currentUser._id === card.owner._id;
+    // const isOwn = currentUser._id === card.owner._id;
+    // const isOwn = currentUser === card.owner;
 
     return (
         <article className="element">
             <img src={card.link} alt={card.name} className="element__image" onClick={handleCardClick} />
-            { isOwn && <button
+            { currentUser._id === card.owner && <button
                 type="button"
                 className="element__button-trash"
                 aria-label="Удалить карточку"

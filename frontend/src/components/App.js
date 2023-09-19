@@ -71,7 +71,8 @@ function App() {
     api.deleteCard(currentCard._id, localStorage.token)
       .then(() => {
         setCards(prevCards => prevCards.filter(card => {
-          return card._id !== currentCard._id
+          // return card._id !== currentCard._id
+          return card !== currentCard._id
         }))
       })
       .catch(error => {
@@ -81,7 +82,8 @@ function App() {
 
   //Set or delete like to card function
   function handleCardLike(card) {
-    const isLiked = card.likes.some(i => i._id === currentUser._id);
+    // const isLiked = card.likes.some(i => i._id === currentUser._id);
+    const isLiked = card.likes.some(i => i._id === currentUser);
     if (isLiked) {
       api.deleteLike(card._id, localStorage.token)
         .then((newCard) => {
@@ -208,7 +210,8 @@ function App() {
           if (res) {
             setLoggedIn(true);
             navigate("/");
-            setEmail(res.data.email);
+            console.log(res);
+            // setEmail(res.data.email);
           }
         })
         .catch((err) => console.log(err));

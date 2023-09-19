@@ -1,5 +1,5 @@
 export const BASE_URL = 'https://api.15sprint.nomoredomainsrocks.ru';
-
+// export const BASE_URL = 'http://localhost:3001';
 const checkResponse = (res) => {
   return res.ok ? res.json() : Promise.reject(`Ошибка: ${res.status}`);
 };

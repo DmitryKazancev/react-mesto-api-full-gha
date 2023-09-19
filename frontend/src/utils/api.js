@@ -118,6 +118,7 @@ class Api {
 
 const api = new Api({
     baseUrl: 'https://api.15sprint.nomoredomainsrocks.ru',
+    // baseUrl: 'http://localhost:3001',
 });
 
 
