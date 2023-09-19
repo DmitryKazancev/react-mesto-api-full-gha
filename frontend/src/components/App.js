@@ -210,8 +210,8 @@ function App() {
           if (res) {
             setLoggedIn(true);
             navigate("/");
-            console.log(res);
-            // setEmail(res.data.email);
+            // console.log(res);
+            setEmail(res.email);
           }
         })
         .catch((err) => console.log(err));
