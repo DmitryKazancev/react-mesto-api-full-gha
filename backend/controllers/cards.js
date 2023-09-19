@@ -4,22 +4,6 @@ const ForbiddenStatus = require('../errors/ForbiddenStatus');
 const Card = require('../models/card');
 
 // Card add controller
-// module.exports.addCard = (req, res, next) => {
-//   const { name, link } = req.body;
-//   Card.create({ name, link, owner: req.user._id })
-//     .then((card) => {
-//       res.status(201).send(card);
-//     })
-//     .catch((err) => {
-//       if (err.name === 'ValidationError') {
-//         next(new BadRequest(err.message));
-//       } else {
-//         next(err);
-//       }
-//     });
-// };
-
-// Card add controller
 module.exports.addCard = (req, res, next) => {
   const { name, link } = req.body;
   Card.create({ name, link, owner: req.user._id })
